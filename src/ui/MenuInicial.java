@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ui;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -26,21 +27,133 @@ public class MenuInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        label1 = new java.awt.Label();
+        label2 = new java.awt.Label();
+        label3 = new java.awt.Label();
+        jcbEscoge1 = new javax.swing.JComboBox<>();
+        jcbEscoge2 = new javax.swing.JComboBox<>();
+        btnIniciar = new java.awt.Button();
+        btnSalirJ = new java.awt.Button();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        label1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        label1.setText("Escoger Jugador 1:");
+
+        label2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        label2.setText("Escoger Jugador 2:");
+
+        label3.setAlignment(java.awt.Label.CENTER);
+        label3.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        label3.setText("Bienvenido a Turbo UMG Racing");
+
+        jcbEscoge1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escoger", "Jugador 1", "Jugagor 2", "PC" }));
+
+        jcbEscoge2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escoger", "Jugador 1", "Jugagor 2", "PC" }));
+
+        btnIniciar.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        btnIniciar.setLabel("Iniciar Carrera");
+        btnIniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIniciarActionPerformed(evt);
+            }
+        });
+
+        btnSalirJ.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        btnSalirJ.setLabel("Salir");
+        btnSalirJ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirJActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(20, 20, 20)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jcbEscoge1, 0, 145, Short.MAX_VALUE)
+                                    .addComponent(jcbEscoge2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnSalirJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49)
+                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbEscoge1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcbEscoge2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSalirJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSalirJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirJActionPerformed
+        // Código para salir
+        System.exit(0);
+        
+    }//GEN-LAST:event_btnSalirJActionPerformed
+
+    private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
+        // Código para iniciar carrera
+        try{
+            String jugador1 = jcbEscoge1.getSelectedItem().toString();
+            String jugador2 = jcbEscoge2.getSelectedItem().toString();
+        
+            //Validar que no hayan dejado "Escoger"
+            if(jugador1.equals("Escoger") || jugador2.equals("Escoger")){
+                throw new Exception("Debes seleccionar un jugador en ambas listas.");
+            }
+            //Validar que no escojan el mismo jugador
+            if(jugador1.equals(jugador2)){
+                throw new Exception("Los dos jugadores no pueden ser el mismo.");
+            }
+        
+            //Probamos que funcione al escoger un jugador
+            //JOptionPane.showMessageDialog(this, "Jugador 1: " + jugador1 + "\nJugador 2: " + jugador2, "Selección", JOptionPane.INFORMATION_MESSAGE);
+            //Abrimos VentanaCarrera
+            VentanaCarrera carrera = new VentanaCarrera(jugador1, jugador2);
+            carrera.setVisible(true);
+            
+            //Cerramos el menú actual
+            this.dispose();
+            
+            
+       } catch (Exception ex) {
+            // Captura cualquier error y muestra el mensaje
+            JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+        
+    }//GEN-LAST:event_btnIniciarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +191,12 @@ public class MenuInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button btnIniciar;
+    private java.awt.Button btnSalirJ;
+    private javax.swing.JComboBox<String> jcbEscoge1;
+    private javax.swing.JComboBox<String> jcbEscoge2;
+    private java.awt.Label label1;
+    private java.awt.Label label2;
+    private java.awt.Label label3;
     // End of variables declaration//GEN-END:variables
 }
