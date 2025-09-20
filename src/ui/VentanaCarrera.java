@@ -130,7 +130,7 @@ public class VentanaCarrera extends javax.swing.JFrame {
        
         int limiteX = jPanel1.getWidth() - 150; // 200 = ancho del vehículo
 
-            if(moto1.getX() >= limiteX) mostrarGanador("Moto 1");
+            if(moto1.getX() >= limiteX) mostrarGanador("Moto");
              if(autosport.getX() >= limiteX) mostrarGanador("Autosport");
              if(camioneta.getX() >= limiteX) mostrarGanador("Camioneta");
 
