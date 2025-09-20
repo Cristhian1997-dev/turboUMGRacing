@@ -8,6 +8,27 @@ package model;
  *
  * @author mucun
  */
-public class AutoSport {
+public class AutoSport extends Vehiculo {
+    public AutoSport(String Nombre, String Tamaño){
+        super (Nombre,Tamaño, 200, 150);
+        //200 de velocidad final, 150 de aceleracion
+    }
+    @Override
+    public void Avanzar() {
+        System.out.println(Nombre + " está avanzando a máxima velocidad (" + VelocidadFinal + " km/h)!");
+    }
+    // Método adicional para aumentar la velocidad
+    public void activarTurbo() {
+        System.out.println(Nombre + " activó el turbo! ¡Aceleración aumentada!");
+        Aceleracion += 50; // Aumenta la aceleración
+    }
     
+      // Método para mostrar info específica
+    public void mostrarEspecificaciones() {
+        System.out.println("=== Auto Deportivo ===");
+        System.out.println("Tipo: " + Nombre);
+        System.out.println("Tamaño: " + Tamaño);
+        System.out.println("Velocidad Máxima: " + VelocidadFinal + " km/h");
+        System.out.println("Aceleración: " + Aceleracion + " km/h²");
+    }
 }
